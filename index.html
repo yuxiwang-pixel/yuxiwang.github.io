@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王禹锡 - 个人网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#6366f1',
+                        accent: '#14b8a6',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .transition-all-300 {
+                transition: all 300ms ease-in-out;
+            }
+            .hover-scale {
+                @apply transition-all duration-300 hover:scale-105;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">王禹锡</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary transition-all-300">关于我</a>
+                <a href="#skills" class="hover:text-primary transition-all-300">技能</a>
+                <a href="#experience" class="hover:text-primary transition-all-300">工作经历</a>
+                <a href="#projects" class="hover:text-primary transition-all-300">项目成果</a>
+                <a href="#education" class="hover:text-primary transition-all-300">教育背景</a>
+                <a href="#contact" class="hover:text-primary transition-all-300">联系方式</a>
+            </div>
+            <button class="md:hidden text-dark">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-dark to-primary/90 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <div class="inline-block px-3 py-1 bg-secondary/20 rounded-full text-sm mb-4">业务运营专家</div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">王禹锡</h1>
+                <h2 class="text-xl md:text-2xl text-blue-100 mb-6">用户运营 | 业务运营 | 产品运营</h2>
+                <p class="text-lg mb-8 max-w-lg text-blue-50">专注于AI产品落地、用户增长和业务优化，拥有丰富的跨团队协作和项目管理经验，致力于通过技术创新驱动业务增长。</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-accent text-white px-6 py-3 rounded-lg hover:bg-accent/90 transition-all-300 flex items-center">
+                        <i class="fa fa-envelope mr-2"></i> 联系我
+                    </a>
+                    <a href="#projects" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-all-300 flex items-center">
+                        <i class="fa fa-briefcase mr-2"></i> 查看项目
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 relative">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-20 animate-pulse"></div>
+                    <div class="absolute inset-4 rounded-full bg-dark overflow-hidden border-4 border-primary/30">
+                        <img src="profile_photo.png" alt="王禹锡" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-4">关于我</div>
+                <h2 class="text-3xl font-bold">AI 驱动的业务专家</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2">
+                        <p class="text-lg mb-6">我是一名专注于业务增长、AI产品落地的运营专家，拥有丰富的跨团队协作和项目管理经验。我曾在阿里巴巴、字节跳动、华为等知名企业工作，主导了多个AI相关项目的落地和优化。</p>
+                        <p class="text-lg mb-6">我的核心优势在于将AI技术与业务需求相结合，通过数据驱动和用户洞察，打造既满足用户需求又能为企业创造价值的产品和运营策略。我相信技术创新和用户体验的完美结合是推动业务增长的关键。</p>
+                        <p class="text-lg">在职业生涯中，我积累了丰富的AI产品落地经验，包括大模型应用、智能搜索、AI翻译等领域，并且在用户运营、产品运营和商务管理方面也有深厚的积累。</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-primary">核心优势</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>AI大模型全链路产品化经验</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>用户增长和转化优化</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>跨团队协作和项目管理</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>数据驱动的决策能力</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                <span>国际业务和多语言能力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="py-16 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm mb-4">专业技能</div>
+                <h2 class="text-3xl font-bold">核心能力</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 技能卡片 -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-line-chart text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">用户增长</h3>
+                    <p class="text-gray-300">用户运营、增长策略、A/B测试、用户洞察、转化优化</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <img src="ai_image2.png" alt="AI产品落地" class="w-8 h-8 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">AI产品落地</h3>
+                    <p class="text-gray-300">大模型应用、AI搜索、AI翻译、内容生成、智能匹配</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-tasks text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">项目管理</h3>
+                    <p class="text-gray-300">跨团队协作、流程优化、预算管理、绩效评估、风险控制</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-database text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">数据分析</h3>
+                    <p class="text-gray-300">SQL、Google Analytics、Python、数据可视化、业务分析</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-globe text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">语言能力</h3>
+                    <p class="text-gray-300">英语（六级565/710，托业930/990）、法语（专业八级）</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-briefcase text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">商务管理</h3>
+                    <p class="text-gray-300">合同谈判、预算执行、风险管理、客户关系、供应商管理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-4">职业经历</div>
+                <h2 class="text-3xl font-bold">工作经历</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <!-- 经历项 -->
+                <div class="mb-12 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">用户运营</h3>
+                                <h4 class="text-lg text-primary mb-3">阿里巴巴 - 杭州</h4>
+                                <p class="text-secondary mb-3">国际站ICBU – 用户增长业务部</p>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2024年10月至今</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>负责国际站（Alibaba.com）欧洲&亚太用户增长与AI产品落地:主导 AI 大模型在搜索匹配、商机沟通、内容生产、交易履约全链路产品化，带动大盘 GMV 增长17 亿+人民币。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>负责国际站AI搜索引擎产品优化：主导搭建Query词纠错、同义词拓展、智能匹配、深度搜索（Deep Search）能力，提升用户搜索相关性、支持用户精细化标签筛选，强化商品主体与属性匹配精度，显著提升搜索相关性50%+，搜索转化效率20%+。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>主导买卖家沟通翻译产品全链路优化：上线新用户自动开启、一键配置翻译、基模迭代、幻觉扫描能力，用户渗透率大幅提升30%+，订单转化效率提升10%+。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>联合通义千问、Google等技术团队参与AI大语言模型训练，主导 80 + 项 大语言模型升级A/B 实验，推动搜索、沟通、多模态生成、商机获取等 AI 能力落地，带动日均支付订单同比+40%，高质量询盘同比+110%。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-12 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">业务运营</h3>
+                                <h4 class="text-lg text-primary mb-3">字节跳动 - 北京</h4>
+                                <p class="text-secondary mb-3">商业化BG - 广告服务与体验部</p>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2022年11月–2024年9月</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>负责广告商业化 LTC 全流程产品与客户体验体系搭建，覆盖合同签约、预算执行、履约提醒、自助查询、合规风控核心链路。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>主导年框合同线上化与自动化履约产品设计，实现合同签署、节点提醒、进度通知、规则披露、后台消息推送全流程产品化，签约效率提升80%+，支撑年度3亿+预算高效落地。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>协同产研落地巨量引擎后台消息推送体系，支持客户自助查询年框完成度、预算消耗、考核进度、待办事项，降低人工咨询 70%+。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-12 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">商务经理</h3>
+                                <h4 class="text-lg text-primary mb-3">华为 - 深圳/摩洛哥</h4>
+                                <p class="text-secondary mb-3">运营商BG - 全球销售部</p>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2019年10月–2022年10月</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>为Orange(法国电信)摩洛哥子网、本土INWI运营商5G通信项目提供全流程商务支持，跨部门协同销售、产品、财经、供应链等部门设计项目招投标与合同签约方案，参与项目评审与风险评估并制定风险兜底方案，主导对客商务谈判，确保内部方案落地，完成年度营收1000万+USD。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>负责摩洛哥子公司LTC流程执行PMO，支撑CEO/CFO项目决策流程，全维度监控流程执行效率及合规度，推动流程适配化方案落地，提升项目整体运作效率60%+。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-12 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">运营 & 技术部 - 实习</h3>
+                                <h4 class="text-lg text-primary mb-3">花旗银行 - 巴黎</h4>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2018年3月–2018年9月</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>帮助欧元区客户完成跨行记名股票交易清算与结算工作，定期向 Euroclear 欧洲结算系统同步股东信息及持股情况，确保信息传递100%准确度。</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                    <span>整理并分类海外客户在法国CAC购买企业股份所产生的法律、税务材料，主动对接客户沟通税务相关问题，提供专业解决方案。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目成果 -->
+    <section id="projects" class="py-16 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm mb-4">项目成果</div>
+                <h2 class="text-3xl font-bold">AI 驱动的项目实践</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 项目卡片 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <img src="ai_image.png" alt="AI大模型全链路产品化" class="w-24 h-24 object-contain relative z-10">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">AI大模型全链路产品化</h3>
+                        <p class="text-gray-300 mb-4">主导AI大模型在搜索匹配、商机沟通、内容生产、交易履约全链路产品化，带动阿里巴巴国际站大盘GMV增长17亿+人民币。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">AI产品</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">用户增长</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">GMV增长</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <i class="fa fa-search text-6xl text-primary/60 relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">AI搜索引擎优化</h3>
+                        <p class="text-gray-300 mb-4">主导搭建Query词纠错、同义词拓展、智能匹配、深度搜索（Deep Search）能力，提升用户搜索相关性50%+，搜索转化效率20%+。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">AI搜索</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">用户体验</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">转化优化</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <i class="fa fa-comments text-6xl text-primary/60 relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">买卖家沟通翻译优化</h3>
+                        <p class="text-gray-300 mb-4">上线新用户自动开启、一键配置翻译、基模迭代、幻觉扫描能力，用户渗透率大幅提升30%+，订单转化效率提升10%+。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">AI翻译</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">用户体验</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">转化优化</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <i class="fa fa-language text-6xl text-primary/60 relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">语种切换产品优化</h3>
+                        <p class="text-gray-300 mb-4">新增默认语种跟随设备系统语言逻辑，并读取用户历史Cookie语言偏好，实现语种智能推荐与一键切换，显著提升多语用户DAU+5000/日均。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">用户体验</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">多语言</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">DAU提升</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <i class="fa fa-file-text text-6xl text-primary/60 relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">广告商业化LTC全流程</h3>
+                        <p class="text-gray-300 mb-4">主导年框合同线上化与自动化履约产品设计，实现合同签署、节点提醒、进度通知、规则披露、后台消息推送全流程产品化，签约效率提升80%+。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">流程优化</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">效率提升</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">产品化</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
+                        <i class="fa fa-globe text-6xl text-primary/60 relative z-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">5G通信项目商务支持</h3>
+                        <p class="text-gray-300 mb-4">为Orange(法国电信)摩洛哥子网、本土INWI运营商5G通信项目提供全流程商务支持，完成年度营收1000万+USD。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">商务谈判</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">项目管理</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">国际业务</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-4">教育背景</div>
+                <h2 class="text-3xl font-bold">学术经历</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <!-- 教育项 -->
+                <div class="mb-8 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">管理学 & 国际商务 双硕士</h3>
+                                <h4 class="text-lg text-primary mb-3">法国北方高等商学院（EDHEC）</h4>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2016年9月–2019年10月</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <p class="text-gray-600">专注于国际商务管理和全球市场策略，培养了跨文化沟通和国际业务拓展能力。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-8 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">网络经济IT战略项目 交换</h3>
+                                <h4 class="text-lg text-primary mb-3">波士顿大学</h4>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">交换期间</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <p class="text-gray-600">深入学习网络经济和IT战略，了解全球数字经济发展趋势和技术创新对商业模式的影响。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-8 relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary"></div>
+                    <div class="ml-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold">法语 & 国际经济与贸易 双学士</h3>
+                                <h4 class="text-lg text-primary mb-3">广东外语外贸大学</h4>
+                            </div>
+                            <span class="text-secondary bg-primary/10 px-4 py-1 rounded-full text-sm">2012年9月–2016年6月</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <p class="text-gray-600">校长奖章奖学金(2016 年) / 社会工作奖学金(2013 年)</p>
+                            <p class="text-gray-600 mt-2">掌握法语和国际经济与贸易专业知识，为国际业务拓展和跨文化交流奠定基础。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="py-16 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm mb-4">联系我</div>
+                <h2 class="text-3xl font-bold">联系方式</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- 个人联系方式 -->
+                <div>
+                    <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white">我的联系方式</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                                <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-phone text-primary"></i>
+                                </div>
+                                <span>19705428602</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                                <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <span>yuxi.wang@edhec.com</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                                <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-weixin text-primary"></i>
+                                </div>
+                                <span>wyxnoah</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-gray-700 rounded-lg">
+                                <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa fa-linkedin text-primary"></i>
+                                </div>
+                                <a href="https://linkedin.com/in/wangyx" class="text-primary hover:underline">linkedin.com/in/wangyx</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 招聘人联系方式表单 -->
+                <div>
+                    <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white">与我联络</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1 text-gray-300">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium mb-1 text-gray-300">公司</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1 text-gray-300">邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-1 text-gray-300">电话</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-1 text-gray-300">留言</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg hover:opacity-90 transition-all-300">提交信息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">王禹锡</h3>
+                    <p class="text-gray-400 mt-2">AI 产品专家 | 用户运营 | 商务经理</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#about" class="text-gray-400 hover:text-primary transition-all-300">关于我</a>
+                    <a href="#skills" class="text-gray-400 hover:text-primary transition-all-300">技能</a>
+                    <a href="#experience" class="text-gray-400 hover:text-primary transition-all-300">工作经历</a>
+                    <a href="#projects" class="text-gray-400 hover:text-primary transition-all-300">项目成果</a>
+                    <a href="#education" class="text-gray-400 hover:text-primary transition-all-300">教育背景</a>
+                    <a href="#contact" class="text-gray-400 hover:text-primary transition-all-300">联系方式</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://linkedin.com/in/wangyx" class="text-gray-400 hover:text-primary transition-all-300">
+                        <i class="fa fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-all-300">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500">&copy; 2026 王禹锡 个人网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // 表单提交处理
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('信息已提交，我会尽快与您联系！');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
