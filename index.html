@@ -51,9 +51,19 @@
                 <a href="#education" class="hover:text-primary transition-all-300">教育背景</a>
                 <a href="#contact" class="hover:text-primary transition-all-300">联系方式</a>
             </div>
-            <button class="md:hidden text-dark">
+            <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
                 <i class="fa fa-bars text-xl"></i>
             </button>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md py-4">
+                <div class="container mx-auto px-4 flex flex-col space-y-4">
+                    <a href="#about" class="hover:text-primary transition-all-300">关于我</a>
+                    <a href="#skills" class="hover:text-primary transition-all-300">技能</a>
+                    <a href="#experience" class="hover:text-primary transition-all-300">工作经历</a>
+                    <a href="#projects" class="hover:text-primary transition-all-300">项目成果</a>
+                    <a href="#education" class="hover:text-primary transition-all-300">教育背景</a>
+                    <a href="#contact" class="hover:text-primary transition-all-300">联系方式</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -324,7 +334,7 @@
                 <div class="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all-300 border border-gray-700">
                     <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 animate-pulse"></div>
-                        <img src="ai_image.png" alt="AI大模型全链路产品化" class="w-24 h-24 object-contain relative z-10">
+                        <img src="ai_photo.png" alt="AI大模型全链路产品化" class="w-24 h-24 object-contain relative z-10">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3 text-white">AI大模型全链路产品化</h3>
@@ -611,6 +621,22 @@
             e.preventDefault();
             alert('信息已提交，我会尽快与您联系！');
             this.reset();
+        });
+
+        // 移动端菜单处理
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 点击菜单链接后关闭菜单
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
         });
     </script>
 </body>
